@@ -1,0 +1,38 @@
+.blue-image {
+    filter: invert(36%) sepia(63%) saturate(4672%) hue-rotate(197deg) brightness(95%) contrast(106%);
+}
+
+._2EowWTU9:hover .blue-image{
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+.HXBHqXGf {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #204ecf;
+    border-radius: 50%;
+    color: #204ecf;
+    display: flex;
+    display: inline-flex;
+    flex: none;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 400;
+    height: 48px;
+    justify-content: center;
+    line-height: 28px;
+    opacity: 0;
+    position: relative;
+    width: 48px;
+    z-index: 2;
+}
+
+._2VlMER4d {
+    background: #204ecf;
+    bottom: 0;
+    left: 24px;
+    margin: 0;
+    position: absolute;
+    top: 64px;
+    transform: scale(0);
+    width: 1px;
+}
