@@ -375,7 +375,6 @@ html {
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  visibility: hidden;
 }
 
 @media (min-width: 768px) {
@@ -1057,11 +1056,7 @@ html {
 .CV4YLXjk._17f6jrU-._3dWgWApq:before {
   -webkit-backdrop-filter: blur(35px);
   backdrop-filter: blur(35px);
-  background: linear-gradient(
-    179deg,
-    rgba(0, 0, 0, 0.15) 0.8%,
-    hsla(0, 0%, 100%, 0) 104.82%
-  );
+  background: white;
   content: "";
   height: 100%;
   left: 0;
@@ -1164,6 +1159,7 @@ html {
   font-size: 14px;
   line-height: 20px;
   padding: 7px 24px;
+  color: whi;
 }
 
 ._1ZmX59eI {
@@ -2173,7 +2169,7 @@ html {
 }
 
 ._1RVnujnd.jN6WPFAO {
-  opacity: 0;
+  opacity: 1;
 }
 
 ._1RVnujnd:focus-within {

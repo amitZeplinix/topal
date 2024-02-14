@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription, interval, take } from 'rxjs';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit, OnDestroy {
+  private subscription!: Subscription;
+
+  ngOnInit(): void {
+    const intervalTime = 20000; // 20 seconds in milliseconds
+    interval(intervalTime).pipe(
+      take(Infinity) // or the number of times you want to execute the code
+    ).subscribe(() => this.nextStep());
+  }
   items: any = [
     {
       title: 'Developers',
@@ -96,6 +105,15 @@ export class HomepageComponent {
       ],
     },
   ];
+
+  currentStep = 0;
+  nextStep() {
+    this.currentStep++;
+
+    if(this.currentStep == 2){
+      this.currentStep = 0;
+    }
+  }
 
   hireTalent = [
     {
@@ -1006,4 +1024,10 @@ export class HomepageComponent {
       ],
     },
   ];
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 }
